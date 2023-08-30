@@ -33,13 +33,43 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/FullUser'
-                  
         default:
           description: Default error sample response
       tags:
         - Users
+    post:
+      summary: create a new user
+      description: store user on server
+      operationId: createUser
+      requestBody: 
+        required: true
+        content: 
+          application/json: 
+            schema:
+              $ref: '#/components/schemas/PostNewUser'
+      responses:
+        '201':
+          description: successful request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FullUser'
+      tags:
+        - Users
 components:
   schemas:
+    PostNewUser:
+      type: object
+      properties: 
+        username:
+          type: string
+          example: john.doe@example.com
+        score:
+          type: integer
+          example: 90012
+        active:
+          type: boolean
+          example: true
     FullUser:
       type: object
       properties:
