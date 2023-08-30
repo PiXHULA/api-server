@@ -64,24 +64,17 @@ components:
         username:
           type: string
           example: john.doe@example.com
-        score:
+        age:
           type: integer
-          example: 90012
+          example: 55
         active:
           type: boolean
           example: true
     FullUser:
-      type: object
-      properties:
-        id:
-          type: string
-          example: 6dba9a81-174c-4d9d-9b82-dd50126ed714
-        username:
-          type: string
-          example: john.doe@example.com
-        score:
-          type: integer
-          example: 9001
-        active:
-          type: boolean
-          example: true
+      allOf:
+      - $ref: '#/components/schemas/PostNewUser'
+      - type: object
+        properties:
+          id:
+            type: string
+            example: 6dba9a81-174c-4d9d-9b82-dd50126ed714
