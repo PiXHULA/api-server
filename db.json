@@ -1,22 +1,22 @@
 {
   "users": [
     {
-      "id": "1234abc",
-      "username": "bear",
-      "score": 55,
+      "id": "6d8f2179-d568-4103-97d8-b3a90033b18a",
+      "username": "Lucille",
+      "age": 13,
       "active": true
     },
     {
-      "id": "qwerty",
-      "username": "jed",
-      "score": 553,
+      "id": "d61dfa9b-3b6c-4c28-b45e-08a9d2ff9555",
+      "username": "Bobby",
+      "age": 30,
       "active": true
     },
     {
-      "username": "schmeb",
-      "score": 59,
-      "active": true,
-      "id": "i1HYeyQ"
+      "id": "bf6404fc-063f-4397-bc5e-cb7e4e6f97e4",
+      "username": "Freddie",
+      "age": 59,
+      "active": true
     }
   ],
   "attempts": [
