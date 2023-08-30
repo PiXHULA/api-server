@@ -51,7 +51,7 @@ components:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/FullUser'
+            $ref: '#/components/schemas/UserArray'
   requestBodies:
     UserRequestBody:
       required: true
@@ -60,6 +60,10 @@ components:
           schema:
             $ref: '#/components/schemas/PostNewUser'
   schemas:
+    UserArray:
+      type: array
+      items:
+        $ref: '#/components/schemas/FullUser'
     PostNewUser:
       type: object
       properties: 
