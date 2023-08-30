@@ -1,0 +1,57 @@
+openapi: 3.0.1
+info:
+  title: My API
+  version: '1.0'
+  description: some great api...
+  termsOfService: https://www.example.com
+  contact:
+    email: support@seb.se
+    name: Support Team
+    url: https://www.example.com/support
+  license:
+    name: License
+    url: https://www.example.com/license
+servers:
+  - url: http://localhost:3000
+    variables: {}
+    description: local mock server
+  - url: https://my-json-server.typicode.com/pixhula/api-server
+    variables: {}
+    description: my json server
+paths:
+  /users:
+    summary: creates and returns users
+    description: GET and POST users
+    get:
+      summary: fetches users
+      description: returns users from server
+      operationId: fetchUsers
+      responses:
+        '200':
+          description: successful request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FullUser'
+                  
+        default:
+          description: Default error sample response
+      tags:
+        - Users
+components:
+  schemas:
+    FullUser:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 6dba9a81-174c-4d9d-9b82-dd50126ed714
+        username:
+          type: string
+          example: john.doe@example.com
+        score:
+          type: integer
+          example: 9001
+        active:
+          type: boolean
+          example: true
